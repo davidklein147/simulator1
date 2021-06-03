@@ -1,0 +1,20 @@
+<div class="container">
+
+    <div style="float: left;" *ngIf="data.isLogin">
+        <img class="my-3" src="assets/img/images1.jpg" style="height: 50px; width: 50px;">
+    </div>
+
+    <div *ngIf="data.isLogin" class="text-sm-right">
+        <div *ngIf="!data.isCreate">already have on account? <a routerLink="/login">log in</a></div>
+        
+        <div *ngIf="data.isCreate && !data.inteinRegister.details.name">already do'nt have on
+            account? <a routerLink="/entrance">ragister</a></div>
+        
+            <p *ngIf="this.data.isCreate && data.inteinRegister.details.name ">
+            <span class="border" style="height: 20px; width: 20px; border-radius: 75%;">
+                {{data.inteinRegister.details.name[0]}}
+            </span>
+            {{data.inteinRegister.details.name}}
+        </p>
+    </div>
+</div>

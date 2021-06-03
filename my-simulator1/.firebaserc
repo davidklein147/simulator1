@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "interns-cc30a": {
+      "hosting": {
+        "my-simulator": [
+          "interns-cc30a"
+        ]
+      }
+    }
+  }
+}

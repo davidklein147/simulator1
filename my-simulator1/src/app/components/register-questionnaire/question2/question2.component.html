@@ -1,0 +1,48 @@
+<div class="container">
+    <small style="font-size:xx-small">personal details</small>
+    <h2>please tell us about yourself, personally</h2>
+    <br>
+    <div class="row">
+        <div class="col-2">
+            <label for="exampleInputEmail1">age</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="enter your age">
+        </div>
+        <div class="col-2"></div>
+        <div class="col-2">
+            <label for="country">country</label>
+            <select class="form-control form-control" id="country" #country (input)="stetesList(country.value)">
+                <option [ngValue]="undefined" selected hidden>Select country...</option>
+                <option *ngFor="let stete of stetes"> {{stete}}</option>
+            </select>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-2">
+            <label for="city">city</label>
+            <select class="form-control form-control" id="city" [disabled]="!citys">
+                <option [ngValue]="undefined" selected hidden>Select city...</option>
+                <option *ngFor="let city of citys"> {{city}}</option>
+            </select>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-2">
+            <label for="exampleInputEmail1">graduation year</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="enter your graduation year">
+        </div>
+        <div class="col-2"></div>
+        <div class="col-4">
+            <label for="dropdownbasic1">academic institiution</label>
+            <div ngbDropdown class="d-inline-block form-control-range">
+                <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>select your
+                    academic</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem>Action - 1</button>
+                    <button ngbDropdownItem>Another Action</button>
+                    <button ngbDropdownItem>Something else is here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

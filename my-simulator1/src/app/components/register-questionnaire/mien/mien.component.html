@@ -1,0 +1,9 @@
+<div class="container niseVizibility">
+<app-question2  *ngIf = "page === 1"></app-question2>
+<app-question4  *ngIf = "page === 3"></app-question4>
+<app-question3  *ngIf = "page === 2"></app-question3>
+<button class="btn btn-secondary text-uppercase" (click) ="updatePage()"> next</button>
+<br>
+<br>
+<ngb-progressbar class="bottemBar" type="secondary" [value]="50"></ngb-progressbar>
+</div>

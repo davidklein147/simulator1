@@ -1,0 +1,27 @@
+<div class="container niseVizibility">
+  <div style="margin: 30px 80px;">
+    <h2>wellcome, intern</h2>
+    <div>please fill in the follwing fields to create on account</div>
+    <br>
+    <div class="form-group row">
+      <div class="col-4">
+        <label>ID number<input type="id" placeholder="Id number" class="form-control"
+            [(ngModel)]='internDetails.id'></label>
+      </div>
+      <div class="col-4">
+        <label>full name<input type="text" placeholder="enter your name" class="form-control"
+            [(ngModel)]='internDetails.name'></label>
+      </div>
+      <div class="col-4">
+        <label>Passpord/citizenship ID<input type="passpord" placeholder="Passpord or citizenship ID"
+            class="form-control " [(ngModel)]='internDetails.passport'></label>
+      </div>
+      <div class="col-6">
+        <label>phone number<input type="text" placeholder="972-your phonnumber" class="form-control "
+            [(ngModel)]='internDetails.phoneNum'></label>
+        <div>a verification code will be send to you to this number</div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-secondary text-uppercase" (click)='send()'>continue</button>
+  </div>
+</div>

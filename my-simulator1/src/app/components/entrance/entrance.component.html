@@ -1,0 +1,30 @@
+<div class="containar">
+<br>
+    <div class="row" style="margin: 30px 200px; height: 400px;">
+        <div class="col-6 mx-auto" >
+            <div class="border mx-5" style="height: 100%; width: auto;"></div>
+        </div>
+        <div class="col-6">
+            <div class="row  text-uppercase">
+                <div class="col-3 underline" (click)="typeUser('intern')">intern</div>
+                <div class="col-3 underline " (click)="typeUser('supervisors')">supervisors</div>
+            </div>
+            <div class="text-uppercase">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>wellcome {{kindUser}}</h2>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        <button class="btn btn-secondary text-uppercase" [routerLink] = '["/details"]'> register now</button>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 my-5">
+            <h3 *ngIf="notifi==1" style="color: red;">Your code is invalid</h3>
+            <h3 *ngIf="notifi==2" style="color: orange;">Your code is incorrect, try again</h3>
+            <h2 class="">Hi {{data.inteinRegister.details.name}} !
+                please type the mobile verification code you received</h2>
+                <br>
+                <br>
+            <input class="m-2" style="width: 40px;" type="text" maxlength="1" id="1" autofocus (keyup)="pass($event)" [(ngModel)]="char1">
+            <input class="m-2" style="width: 40px;" type="text" maxlength="1" id="2" (keyup)="pass($event)" [(ngModel)]="char2">
+            <input class="m-2" style="width: 40px;" type="text" maxlength="1" id="3" (keyup)="pass($event)" [(ngModel)]="char3">
+            <input class="m-2" style="width: 40px;" type="text" maxlength="1" id="4" [(ngModel)]="char4">
+
+            <br>
+            <br>
+
+            <div>I did'nt received,
+                <a class="text-primary" (click)="data.sendCode()" (click)="code()">resend</a>
+            </div>
+            <br>
+            <button class="btn btn-secondary text-uppercase" (click)="send()">continue</button>
+        </div>
+    </div>
+</div>
